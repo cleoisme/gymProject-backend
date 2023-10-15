@@ -162,10 +162,12 @@
 
 - [ ]Github 上 CI/CD Pipeline Setup
 
-## Ask
+## Asks
 
 - 模拟实际工作中的标准流程
   - eg. feature proposal -> design review -> implement -> code review -> merge -> staged deployment and release
+- 评估项目质量的标准 - approve/not
+- 评估 engineer 资历的标准 - promote/not
 - Weekly meeting:
   - 1/2 Code review/Q&A session
   - 2/2 Presentation and overview of the next week
