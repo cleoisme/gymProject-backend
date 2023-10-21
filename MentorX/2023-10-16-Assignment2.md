@@ -18,6 +18,7 @@
   - [ ] `posts`:
     - Staged publishment system: https://www.django-cms.org/en/
 
+- [ ] Finalize the data schema into an ER (Entity Relationship) diagram (AHHHHHH)
 - [ ] Start programming on endpoints
 - [ ] Initialize the repo for the fronend in React
   - Start with the 'user' component, improve the component reusibility along the way
