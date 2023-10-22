@@ -2,15 +2,15 @@
 
 ## Tasks
 
-- [ ] Optimize data schema from the last week
+- [x] Optimize data schema from the last week
 
-  - [ ] `clients` -> user
-  - [ ] `admin`: Inherit User Object
+  - [x] `clients` -> user
+  - [x] `admin`: Inherit User Object
 
     - id: UserId
     - isAdmin: Boolean
 
-  - [ ] `notification`:
+  - [x] `notification`:
 
     - no need to save in db
     - 但是后端需要以 model 形式存在
@@ -18,7 +18,7 @@
   - [ ] `posts`:
     - Staged publishment system: https://www.django-cms.org/en/
 
-- [ ] Start programming on data modeling
+- [x] Start programming on data modeling
 - [x] Initialize the repo for the fronend in React
   - Start with the 'user' component, improve the component reusibility along the way
 - [x] Github **Project** Tab Setup
