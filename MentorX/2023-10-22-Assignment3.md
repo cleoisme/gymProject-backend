@@ -6,6 +6,8 @@
   - [ ] Recap of the foreign keys/primary keys?
   - [ ] Distinction between foreign keys/primary keys in code
 - [ ] Github Project overview
+- [ ] 在 views 中是否可以进一步分流？
+- [ ] urls.py 中如何区分 post, put, get 等 operations
 
 ### Next steps:
 
