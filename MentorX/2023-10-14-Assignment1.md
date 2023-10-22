@@ -160,8 +160,8 @@
      }
      ```
 
-- [ ]Github 上 CI/CD Pipeline Setup
-- [ ]Set up Python Debugger
+- [x] Github 上 CI/CD Pipeline Setup
+- [x] Set up Python Debugger
 
 ## Asks
 
