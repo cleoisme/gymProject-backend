@@ -1,19 +1,9 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-
 
 class Promotion(models.Model):
     description = models.CharField(max_length=255)
     discount = models.FloatField()
-
-
-class Notification(models.Model):
-    message = models.CharField(max_length=255)
-    created_at = models.DateTimeField(auto_now_add=True)
-    start_datetime = models.DateTimeField()
-    end_datetime = models.DateTimeField()
 
 
 class Address(models.Model):
@@ -53,10 +43,6 @@ class Admin(User):
     password = models.CharField(max_length=255)
 
 
-class Trainer(User):
-    pass
-
-
 class AppointmentType(models.Model):
     title = models.CharField(max_length=255)
 
@@ -68,7 +54,12 @@ class Appointment(models.Model):
     start_datetime = models.DateTimeField()
     end_datetime = models.DateTimeField()
     app_type = models.ForeignKey(AppointmentType, on_delete=models.PROTECT)
-    trainer = models.OneToOneField(Trainer, on_delete=models.SET_NULL)
+    trainer = models.ForeignKey(
+        User, on_delete=models.SET_NULL, null=True, related_name="trainer"
+    )
+    trainee = models.ForeignKey(
+        User, on_delete=models.SET_NULL, null=True, related_name="trainee"
+    )
     promotions = models.ManyToManyField(Promotion, null=True)
 
 
