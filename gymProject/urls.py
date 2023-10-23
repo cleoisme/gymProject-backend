@@ -21,4 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("playground/", include("playground.urls")),
     path("gymCMS/", include("gymCMS.urls")),
+    path("notificationSender/", include("notificationSender.urls")),
 ]
