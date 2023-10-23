@@ -1,6 +1,16 @@
 {
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
   },
-  "python.formatting.provider": "none"
+  "python.languageServer": "Default",
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.extraPaths": [],
+  "python.analysis.typeshedPaths": [],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "error",
+    "reportUnusedImport": "error"
+  },
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true
 }

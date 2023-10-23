@@ -2,11 +2,11 @@
 
 ## Tasks
 
-- [ ] 将 Notification 的部分分割成另一个 App
+- [x] 将 Notification 的部分分割成另一个 App
 - [ ] 将每个 Class 转化成一个 file，并将所有 Classes 放入到一个叫做 models 的 folder 里，以 models.py 为 top-level 的 file 和对 external folder 的接口
 - [ ] 用类似方式在 /views 中进一步分流 Routing
-- [ ] urls.py 中如何区分 post, put, get 等 operations
-- [ ] VSCode extension to check duplicate imports
+- [ ] views.py 中如何区分 post, put, get 等 operations
+- [x] VSCode extension to check duplicate imports - pylint installed
 - [ ] Fix Github Action
   - within the virtual environment folder, `pip freeze > requirements.txt`
   - upload the `requirements.txt` to the project-level of folder
