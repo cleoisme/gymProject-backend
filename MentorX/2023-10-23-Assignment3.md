@@ -7,10 +7,17 @@
 - [ ] 用类似方式在 /views 中进一步分流 Routing
 - [ ] views.py 中如何区分 post, put, get 等 operations
 - [x] VSCode extension to check duplicate imports - pylint installed
-- [ ] Fix Github Action
-  - within the virtual environment folder, `pip freeze > requirements.txt`
+- [x] Fix Github Action
+
+  - within the project directory and activate the virtual environment, then run `pip freeze > requirements.txt`
   - upload the `requirements.txt` to the project-level of folder
   - push the `requirements.txt` to the repo and trigger another round of Pipeline
+
+  **Question**:
+
+  - How to locally test this pipeline first? or trigger the pipeline on the Branch?
+  - local `Django==4.2.6` but update the `requirement.txt` to be 3.2.22 as the latest supported version. Is this a bad practice or acceptable? how to fix if not?
+
 - [ ] Update the User class
   - Add the `is_admin` attribute to the User class
   - remove the admin class
