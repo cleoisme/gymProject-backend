@@ -4,6 +4,14 @@
 
 - [x] 将 Notification 的部分分割成另一个 App
 - [ ] 将每个 Class 转化成一个 file，并将所有 Classes 放入到一个叫做 models 的 folder 里，以 models.py 为 top-level 的 file 和对 external folder 的接口
+  - [ ] Update the User class
+    - Add the `is_admin` attribute to the User class
+    - remove the admin class
+    - update the `password` to the Django built-in password field
+  - [ ] **Question**: Relationship definition practice
+    - Since Django will help create the reverse relationship, how to decide where to put the definition?
+    - Recap of the foreign keys/primary keys?
+    - Distinction between foreign keys/primary keys in code
 - [ ] 用类似方式在 /views 中进一步分流 Routing
 - [ ] views.py 中如何区分 post, put, get 等 operations
 - [x] VSCode extension to check duplicate imports - pylint installed
@@ -17,15 +25,6 @@
 
   - How to locally test this pipeline first? or trigger the pipeline on the Branch?
   - local `Django==4.2.6` but update the `requirement.txt` to be 3.2.22 as the latest supported version. Is this a bad practice or acceptable? how to fix if not?
-
-- [ ] Update the User class
-  - Add the `is_admin` attribute to the User class
-  - remove the admin class
-  - update the `password` to the Django built-in password field
-- [ ] Relationship definition practice
-  - Since Django will help create the reverse relationship, how to decide where to put the definition?
-  - Recap of the foreign keys/primary keys?
-  - Distinction between foreign keys/primary keys in code
 
 ## Notes
 
