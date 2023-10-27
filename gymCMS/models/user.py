@@ -4,16 +4,16 @@ from gymCMS.models.address import Address
 
 
 class User(models.Model):
-    is_admin = False
+    is_admin = models.BooleanField()
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
+    username = models.CharField(max_length=255, unique=True)
+    password = models.CharField(max_length=128)  # This is the password field
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=255)
     birth_date = models.DateTimeField(null=True)
     address = models.OneToOneField(Address, on_delete=models.PROTECT, primary_key=True)
 
-
-class Client(User):
     MEMBERSHIP_BRONZE = "B"
     MEMBERSHIP_SILVER = "S"
     MEMBERSHIP_GOLD = "G"
@@ -27,9 +27,3 @@ class Client(User):
     membership = models.CharField(
         max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE
     )
-
-
-class Admin(User):
-    is_admin = True
-    username = models.CharField(max_length=255)
-    password = models.CharField(max_length=255)
