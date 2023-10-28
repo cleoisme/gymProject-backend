@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+from .views import views
+>>>>>>> 4412333 (add views to ./gymCMS)
 from django.urls import path
 from gymCMS.views.address import (
     create_an_address,
