@@ -26,6 +26,13 @@
   - How to locally test this pipeline first? or trigger the pipeline on the Branch?
   - local `Django==4.2.6` but update the `requirement.txt` to be 3.2.22 as the latest supported version. Is this a bad practice or acceptable? how to fix if not?
 
+## Todos
+
+- Database migration
+  - and how to use MongoDB instead, try both for learning purposes
+- Understand the Django built-in Admin system
+- Fix the integration errors once all current PRs merged in
+
 ## Notes
 
 - `.yml` / `.ymal` files:
