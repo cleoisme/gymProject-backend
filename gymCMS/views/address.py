@@ -1,39 +1,27 @@
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-)
-from django.urls import reverse_lazy
-from .models import Address
+from django.http import HttpResponse
+from gymCMS.models.address import Address
 
 
-class AddressListView(ListView):
+def list_all_addresses():
     model = Address
-    template_name = "address/address_list.html"  # Replace with your actual template
+    return HttpResponse(str(model))
 
 
-class AddressDetailView(DetailView):
+def show_address_details():
     model = Address
-    template_name = "address/address_detail.html"  # Replace with your actual template
+    return HttpResponse(str(model))
 
 
-class AddressCreateView(CreateView):
+def create_an_address():
     model = Address
-    template_name = "address/address_form.html"  # Replace with your actual template
-    fields = "__all__"
+    return HttpResponse(str(model))
 
 
-class AddressUpdateView(UpdateView):
+def update_an_address():
     model = Address
-    template_name = "address/address_form.html"  # Replace with your actual template
-    fields = "__all__"
+    return HttpResponse(str(model))
 
 
-class AddressDeleteView(DeleteView):
+def delete_an_address():
     model = Address
-    template_name = (
-        "address/address_confirm_delete.html"  # Replace with your actual template
-    )
-    success_url = reverse_lazy("address-list")
+    return HttpResponse(str(model))

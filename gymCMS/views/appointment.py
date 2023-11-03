@@ -1,37 +1,42 @@
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-)
-from django.urls import reverse_lazy
-from .models import AppointmentType, Appointment
+from django.http import HttpResponse
+from gymCMS.models.appointment import Appointment, AppointmentType
 
 
-class AppointmentTypeListView(ListView):
+def list_all_appointment_types():
     model = AppointmentType
-    template_name = "appointments/appointmenttype_list.html"
+    return HttpResponse(str(model))
 
 
-class AppointmentTypeDetailView(DetailView):
+def show_appointment_type_details():
     model = AppointmentType
-    template_name = "appointments/appointmenttype_detail.html"
+    return HttpResponse(str(model))
 
 
-class AppointmentCreateView(CreateView):
+def create_an_appointment_type():
+    model = AppointmentType
+    return HttpResponse(str(model))
+
+
+def list_all_appointments():
     model = Appointment
-    template_name = "appointments/appointment_form.html"
-    fields = "__all__"
+    return HttpResponse(str(model))
 
 
-class AppointmentUpdateView(UpdateView):
+def show_an_appointment():
     model = Appointment
-    template_name = "appointments/appointment_form.html"
-    fields = "__all__"
+    return HttpResponse(str(model))
 
 
-class AppointmentDeleteView(DeleteView):
+def create_an_appointment():
     model = Appointment
-    template_name = "appointments/appointment_confirm_delete.html"
-    success_url = reverse_lazy("appointment-list")
+    return HttpResponse(str(model))
+
+
+def update_an_appointment():
+    model = Appointment
+    return HttpResponse(str(model))
+
+
+def delete_an_appointment():
+    model = Appointment
+    return HttpResponse(str(model))

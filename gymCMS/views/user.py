@@ -1,37 +1,31 @@
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-)
 from django.urls import reverse_lazy
-from .models import User
+
+from gymCMS.models.user import User
 
 
-class UserListView(ListView):
+def list_all_users():
     model = User
     template_name = "user/user_list.html"  # Replace with your actual template
 
 
-class UserDetailView(DetailView):
+def show_user_details():
     model = User
     template_name = "user/user_detail.html"  # Replace with your actual template
 
 
-class UserCreateView(CreateView):
+def create_a_user():
     model = User
     template_name = "user/user_form.html"  # Replace with your actual template
     fields = "__all__"
 
 
-class UserUpdateView(UpdateView):
+def update_a_user():
     model = User
     template_name = "user/user_form.html"  # Replace with your actual template
     fields = "__all__"
 
 
-class UserDeleteView(DeleteView):
+def delete_a_user():
     model = User
     template_name = "user/user_confirm_delete.html"  # Replace with your actual template
     success_url = reverse_lazy("user-list")
