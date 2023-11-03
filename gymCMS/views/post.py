@@ -1,37 +1,24 @@
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-)
-from django.urls import reverse_lazy
-from .models import Post
+from gymCMS.models.post import Post
 
-
-class PostListView(ListView):
+def list_all_posts():
     model = Post
     template_name = "post/post_list.html"  # Replace with your actual template
 
-
-class PostDetailView(DetailView):
+def show_a_post():
     model = Post
     template_name = "post/post_detail.html"  # Replace with your actual template
 
-
-class PostCreateView(CreateView):
+def create_an_post():
     model = Post
     template_name = "post/post_form.html"  # Replace with your actual template
     fields = "__all__"
 
-
-class PostUpdateView(UpdateView):
+def update_a_post():
     model = Post
     template_name = "post/post_form.html"  # Replace with your actual template
     fields = "__all__"
 
-
-class PostDeleteView(DeleteView):
+def delete_a_post():
     model = Post
     template_name = "post/post_confirm_delete.html"  # Replace with your actual template
     success_url = reverse_lazy("post-list")

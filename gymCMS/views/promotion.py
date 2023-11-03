@@ -1,41 +1,27 @@
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-)
-from django.urls import reverse_lazy
-from .models import Promotion
+from django.http import HttpResponse
+from playground.models import Promotion
 
 
-class PromotionListView(ListView):
+def list_all_promotions():
     model = Promotion
-    template_name = "promotion/promotion_list.html"  # Replace with your actual template
+    return HttpResponse(str(model))
 
 
-class PromotionDetailView(DetailView):
+def show_a_promotion():
     model = Promotion
-    template_name = (
-        "promotion/promotion_detail.html"  # Replace with your actual template
-    )
+    return HttpResponse(str(model))
 
 
-class PromotionCreateView(CreateView):
+def create_a_promotion():
     model = Promotion
-    template_name = "promotion/promotion_form.html"  # Replace with your actual template
-    fields = "__all__"
+    return HttpResponse(str(model))
 
 
-class PromotionUpdateView(UpdateView):
+def update_a_promotion():
     model = Promotion
-    template_name = "promotion/promotion_form.html"  # Replace with your actual template
-    fields = "__all__"
+    return HttpResponse(str(model))
 
 
-class PromotionDeleteView(DeleteView):
+def delete_a_promotion():
     model = Promotion
-    template_name = (
-        "promotion/promotion_confirm_delete.html"  # Replace with your actual template
-    )
-    success_url = reverse_lazy("promotion-list")
+    return HttpResponse(str(model))
