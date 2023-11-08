@@ -39,6 +39,8 @@ from gymCMS.views.user import (
     update_a_user,
 )
 
+APP_NAME = "gymCMS"
+
 # URLConf
 urlpatterns = [
     # path("hello/", views.check_project),
