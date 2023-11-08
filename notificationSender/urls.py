@@ -8,7 +8,7 @@ from .views import (
 )
 
 # URLConf
-
+APP_NAME = "notificationSender"
 urlpatterns = [
     path("notifications/", list_all_notifications, name="notification-list"),
     path("notifications/<int:pk>/", show_a_notification, name="notification-detail"),
