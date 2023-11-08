@@ -1,6 +1,6 @@
+
 from django.urls import reverse_lazy
 from .models import Notification
-
 
 def list_all_notifications():
     model = Notification
@@ -31,7 +31,7 @@ def update_a_notification():
     )
     fields = "__all__"
 
-
+    
 def delete_a_notification():
     model = Notification
     template_name = "notification/notification_confirm_delete.html"  # Replace with your actual template

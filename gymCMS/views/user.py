@@ -1,5 +1,4 @@
 from django.urls import reverse_lazy
-
 from gymCMS.models.user import User
 
 
