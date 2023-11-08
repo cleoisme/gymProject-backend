@@ -1,28 +1,26 @@
-from . import views
 from django.urls import path
 from .views import (
-    NotificationListView,
-    NotificationDetailView,
-    NotificationCreateView,
-    NotificationUpdateView,
-    NotificationDeleteView,
+    create_a_notification,
+    delete_a_notification,
+    list_all_notifications,
+    show_a_notification,
+    update_a_notification,
 )
 
 # URLConf
 
 urlpatterns = [
-    path("hello/", views.check_project),
-    path("notifications/", NotificationListView, name="notification-list"),
-    path("notifications/<int:pk>/", NotificationDetailView, name="notification-detail"),
-    path("notifications/create/", NotificationCreateView, name="notification-create"),
+    path("notifications/", list_all_notifications, name="notification-list"),
+    path("notifications/<int:pk>/", show_a_notification, name="notification-detail"),
+    path("notifications/create/", create_a_notification, name="notification-create"),
     path(
         "notifications/<int:pk>/update/",
-        NotificationUpdateView,
+        update_a_notification,
         name="notification-update",
     ),
     path(
         "notifications/<int:pk>/delete/",
-        NotificationDeleteView,
+        delete_a_notification,
         name="notification-delete",
     ),
 ]

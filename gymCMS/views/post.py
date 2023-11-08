@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 from django.urls import reverse_lazy
-
 from gymCMS.models.post import Post
 
 
@@ -18,7 +16,6 @@ def create_an_post():
     model = Post
     template_name = "post/post_form.html"  # Replace with your actual template
     fields = "__all__"
-
 
 
 def update_a_post():
