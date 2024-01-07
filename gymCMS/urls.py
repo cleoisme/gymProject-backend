@@ -1,42 +1,42 @@
 from django.urls import path
 from gymCMS.views.address import (
-    create_an_address,
-    delete_an_address,
     list_all_addresses,
-    show_address_details,
+    show_address_details_by_id,
+    create_an_address,
     update_an_address,
+    delete_an_address,
 )
 from gymCMS.views.appointment import (
-    create_an_appointment,
-    create_an_appointment_type,
-    delete_an_appointment,
-    list_all_appointment_types,
     list_all_appointments,
     show_an_appointment,
-    show_appointment_type_details,
+    create_an_appointment,
     update_an_appointment,
+    delete_an_appointment,
+    list_all_appointment_types,
+    show_appointment_type_details,
+    create_an_appointment_type,
 )
 from gymCMS.views.post import (
-    create_an_post,
-    delete_a_post,
     list_all_posts,
-    show_a_post,
+    show_post_details_by_id,
+    create_a_post,
     update_a_post,
+    delete_a_post,
 )
 
 from gymCMS.views.promotion import (
-    create_a_promotion,
-    delete_a_promotion,
     list_all_promotions,
-    show_a_promotion,
+    show_promotion_details_by_id,
+    create_a_promotion,
     update_a_promotion,
+    delete_a_promotion,
 )
 from gymCMS.views.user import (
-    create_a_user,
-    delete_a_user,
     list_all_users,
-    show_user_details,
+    show_user_details_by_id,
+    create_a_user,
     update_a_user,
+    delete_a_user,
 )
 
 APP_NAME = "gymCMS"
@@ -46,7 +46,7 @@ urlpatterns = [
     # path("hello/", views.check_project),
     # address
     path("addresses/", list_all_addresses, name="address-list"),
-    path("addresses/<int:pk>/", show_address_details, name="address-detail"),
+    path("addresses/<int:pk>/", show_address_details_by_id, name="address-detail"),
     path("address/create/", create_an_address, name="address-create"),
     path(
         "addresses/<int:pk>/update/",
@@ -86,8 +86,8 @@ urlpatterns = [
     ),
     # Post
     path("posts/", list_all_posts, name="post-list"),
-    path("posts/<int:pk>/", show_a_post, name="post-detail"),
-    path("post/create/", create_an_post, name="post-create"),
+    path("posts/<int:pk>/", show_post_details_by_id, name="post-detail"),
+    path("post/create/", create_a_post, name="post-create"),
     path(
         "posts/<int:pk>/update/",
         update_a_post,
@@ -100,7 +100,7 @@ urlpatterns = [
     ),
     # Pomotion
     path("promotions/", list_all_promotions, name="promotion-list"),
-    path("promotions/<int:pk>/", show_a_promotion, name="promotion-detail"),
+    path("promotions/<int:pk>/", show_promotion_details_by_id, name="promotion-detail"),
     path("promotion/create/", create_a_promotion, name="promotion-create"),
     path(
         "promotions/<int:pk>/update/",
@@ -114,7 +114,7 @@ urlpatterns = [
     ),
     # User
     path("users/", list_all_users, name="user-list"),
-    path("users/<int:pk>/", show_user_details, name="user-detail"),
+    path("users/<int:pk>/", show_user_details_by_id, name="user-detail"),
     path("user/create/", create_a_user, name="user-create"),
     path(
         "users/<int:pk>/update/",
