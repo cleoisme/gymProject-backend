@@ -6,6 +6,9 @@ from gymCMS.models.user import User
 class AppointmentType(models.Model):
     title = models.CharField(max_length=255)
 
+    def is_valid(self):
+        pass
+
 
 class Appointment(models.Model):
     title = models.CharField(max_length=255)
@@ -21,3 +24,6 @@ class Appointment(models.Model):
         User, on_delete=models.SET_NULL, null=True, related_name="trainee"
     )
     promotions = models.ManyToManyField(Promotion, null=True)
+
+    def is_valid(self):
+        pass

@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render, get_object_or_404
-from gymCMS.models.Address import Address
+
+from gymCMS.models.address import Address
 
 
 def list_all_addresses(request):
@@ -34,7 +35,7 @@ def update_an_address(request, address_id):
     if request.method == "POST":
         new_address = Address(request.POST, instance=address)
         if new_address.is_valid():
-            new_address.save_by_id(address_id)
+            new_address.save(address_id)
             return redirect(
                 "user_profile"
             )  # Redirect to the user profile where address is updated to after successful creation
