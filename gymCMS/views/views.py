@@ -1,3 +1,4 @@
+# Sample file
 from django.http import HttpResponse
 
 
