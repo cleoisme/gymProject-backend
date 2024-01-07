@@ -42,6 +42,7 @@ from gymCMS.views.user import (
 APP_NAME = "gymCMS"
 
 # URLConf
+# TODO: Update the name (or not) for the html rendering within Django
 urlpatterns = [
     # path("hello/", views.check_project),
     # address
