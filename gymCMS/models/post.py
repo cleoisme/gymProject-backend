@@ -11,3 +11,6 @@ class Post(models.Model):
     last_update = models.DateTimeField(auto_now=True)
     start_datetime = models.DateTimeField()
     end_datetime = models.DateTimeField()
+
+    def is_valid(self):
+        pass
