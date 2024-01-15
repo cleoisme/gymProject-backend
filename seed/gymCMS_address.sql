@@ -1,0 +1,10 @@
+insert into gymCMS_address (street, city, province, country) values ('9 Carpenter Lane', 'Kansas City', 'Missouri', 'United States');
+insert into gymCMS_address (street, city, province, country) values ('6585 Straubel Circle', 'Huntington', 'West Virginia', 'United States');
+insert into gymCMS_address (street, city, province, country) values ('2697 Heath Parkway', 'Tokyo City', 'Tokyo', 'Japan');
+insert into gymCMS_address (street, city, province, country) values ('196 Pond Place', 'Lubbock', 'Texas', 'United States');
+insert into gymCMS_address (street, city, province, country) values ('253 Colorado Lane', 'Whittier', 'California', 'United States');
+insert into gymCMS_address (street, city, province, country) values ('8 Mallory Park', 'Edinburgh', 'Scotland', 'United Kingdom');
+insert into gymCMS_address (street, city, province, country) values ('3 Nova Crossing', 'New Haven', 'Connecticut', 'United States');
+insert into gymCMS_address (street, city, province, country) values ('82 Hanson Street', 'Albany', 'New York', 'United States');
+insert into gymCMS_address (street, city, province, country) values ('3 Forest Dale Road', 'Portland', 'Oregon', 'United States');
+insert into gymCMS_address (street, city, province, country) values ('76 Arkansas Drive', 'Zhengzhou', 'Henan', 'China');

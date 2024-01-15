@@ -4,7 +4,6 @@ from gymCMS.models.address import Address
 
 
 class User(models.Model):
-    id = models.AutoField(primary_key=True, default="1")
     is_admin = models.BooleanField()
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)

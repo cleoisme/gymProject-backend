@@ -9,7 +9,6 @@ class Post(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     last_update = models.DateTimeField(auto_now=True)
-    last_update = models.DateTimeField(auto_now=True)
 
     def is_valid(self):
         pass

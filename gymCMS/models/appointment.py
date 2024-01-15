@@ -1,5 +1,4 @@
 from django.db import models
-from gymCMS.models.promotion import Promotion
 from gymCMS.models.user import User
 
 
@@ -24,9 +23,6 @@ class Appointment(models.Model):
     )
     trainee = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="trainee_appointments"
-    )
-    promotions = models.ManyToManyField(
-        Promotion, null=True, blank=True, related_name="appointments"
     )
 
     def is_valid(self):
