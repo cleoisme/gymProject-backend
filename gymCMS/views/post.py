@@ -24,7 +24,7 @@ def create_a_post(request):
             )  # Redirect to the post list view after successful creation
     else:
         new_post = Post()
-    return render(request, "create_post.html", {"post": new_post})
+    return render(request, "post_create.html", {"post": new_post})
 
 
 # Function to update an existing post
@@ -40,7 +40,7 @@ def update_a_post(request, post_id):
             )  # Redirect to the post list view after successful update
     else:
         new_post = Post(instance=post)
-    return render(request, "update_post.html", {"post": new_post})
+    return render(request, "post_update.html", {"post": new_post})
 
 
 # Function to delete an existing post
@@ -51,4 +51,4 @@ def delete_a_post(request, post_id):
         return redirect(
             "post_list"
         )  # Redirect to the post list view after successful deletion
-    return render(request, "delete_post.html", {"post": post})
+    return render(request, "post_delete.html", {"post": post})

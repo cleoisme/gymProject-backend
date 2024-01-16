@@ -1,0 +1,13 @@
+<html>
+  <body>
+    {% if addresses %}
+    <h1>Hello all {{ addresses }}</h1>
+    <ul>
+      {% for address in addresses}
+      <li>{{address.city}} - {{address.country}}</li>
+    </ul>
+    {% else %}
+    <h1>Hello World</h1>
+    {% endif %}
+  </body>
+</html>

@@ -22,7 +22,7 @@ def create_a_user(request):
             )  # Redirect to user details page after creation
     else:
         new_user = User()
-    return render(request, "create_user.html", {"user": new_user})
+    return render(request, "user_create.html", {"user": new_user})
 
 
 def update_a_user(request, user_id):
@@ -36,7 +36,7 @@ def update_a_user(request, user_id):
             )  # Redirect to user details page after update
     else:
         new_user = User(instance=user)
-    return render(request, "update_user.html", {"user": new_user})
+    return render(request, "user_update.html", {"user": new_user})
 
 
 def delete_a_user(request, user_id):
@@ -44,4 +44,4 @@ def delete_a_user(request, user_id):
     if request.method == "POST":
         user.delete()
         return redirect("list_all_users")  # Redirect to user list after deletion
-    return render(request, "delete_user.html", {"user": user})
+    return render(request, "user_delete.html", {"user": user})

@@ -20,7 +20,7 @@ def create_a_promotion(request):
             return redirect("promotion_list")  # Redirect to the promotion list view
     else:
         new_promotion = Promotion()
-    return render(request, "create_promotion.html", {"promotion": new_promotion})
+    return render(request, "promotion_create.html", {"promotion": new_promotion})
 
 
 def update_a_promotion(request, promotion_id):
@@ -32,7 +32,7 @@ def update_a_promotion(request, promotion_id):
             return redirect("promotion_list")  # Redirect to the promotion list view
     else:
         new_promotion = Promotion(instance=promotion)
-    return render(request, "update_promotion.html", {"promotion": new_promotion})
+    return render(request, "promotion_update.html", {"promotion": new_promotion})
 
 
 def delete_a_promotion(request, promotion_id):
@@ -40,4 +40,4 @@ def delete_a_promotion(request, promotion_id):
     if request.method == "POST":
         promotion.delete()
         return redirect("promotion_list")  # Redirect to the promotion list view
-    return render(request, "delete_promotion.html", {"promotion": promotion})
+    return render(request, "promotion_delete.html", {"promotion": promotion})
