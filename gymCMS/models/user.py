@@ -10,6 +10,7 @@ class User(models.Model):
     username = models.CharField(max_length=255, unique=True)
     password = models.CharField(max_length=128)  # This is the password field
     email = models.EmailField(unique=True)
+    gender = models.CharField(max_length=255, default="Unknown")
     phone = models.CharField(max_length=255)
     birth_date = models.DateTimeField(null=True)
     address = models.OneToOneField(Address, on_delete=models.PROTECT, primary_key=True)

@@ -1,11 +1,13 @@
 from django.shortcuts import redirect, render, get_object_or_404
-
 from gymCMS.models.address import Address
 
 
 def list_all_addresses(request):
-    addresses = Address.objects.all()
-    return render(request, "address_list.html", {"addresses": addresses})
+    addresses = Address.objects.only("city", "country")
+    # Convert the QuerySet to a list of dictionaries
+    addresses_data = list(addresses.values("city", "country"))
+
+    return render(request, "address_list.html", {"addresses": addresses_data})
 
 
 def show_address_details_by_id(request, address_id):

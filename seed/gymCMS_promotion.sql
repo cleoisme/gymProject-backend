@@ -1,0 +1,10 @@
+insert into gymCMS_promotion (description, discount) values ('Nam dui.', 26);
+insert into gymCMS_promotion (description, discount) values ('Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', 81);
+insert into gymCMS_promotion (description, discount) values ('Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', 92);
+insert into gymCMS_promotion (description, discount) values ('Sed sagittis.', 22);
+insert into gymCMS_promotion (description, discount) values ('Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', 82);
+insert into gymCMS_promotion (description, discount) values ('Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', 53);
+insert into gymCMS_promotion (description, discount) values ('Praesent blandit.', 34);
+insert into gymCMS_promotion (description, discount) values ('Proin risus.', 47);
+insert into gymCMS_promotion (description, discount) values ('Maecenas pulvinar lobortis est.', 22);
+insert into gymCMS_promotion (description, discount) values ('In hac habitasse platea dictumst.', 23);
