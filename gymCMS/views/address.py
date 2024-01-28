@@ -1,57 +1,57 @@
+from django.core.serializers import serialize
 from django.shortcuts import redirect, render, get_object_or_404
 from gymCMS.models.address import Address
 
 
 def list_all_addresses(request):
-    addresses = Address.objects.only("city", "country")
-    # Convert the QuerySet to a list of dictionaries
-    addresses_data = list(addresses.values("city", "country"))
+    addresses = Address.objects.all()
+    addresses_data = serialize("json", addresses)
 
     return render(request, "address_list.html", {"addresses": addresses_data})
 
 
-def show_address_details_by_id(request, address_id):
-    # address = Address.objects.get(pk=address_id)
-    address = get_object_or_404(Address, pk=address_id)
-    return render(request, "address_details.html", {"address": address})
+def show_address_details_by_id(request):
+    address_id = request.GET.get("address_id")
+    if address_id is not None:
+        address = get_object_or_404(Address, pk=address_id)
+        address_data = serialize("json", address)
+        return render(request, "address_details.html", {"address": address_data})
+    else:
+        return render(request, "NOT_FOUND.html", {"Items Not Found"})
 
 
 def create_an_address(request):
+    new_address = None
     if request.method == "POST":
-        # TODO: Parse the data load
         new_address = Address(request.POST)
-        # TODO: Validate the address
         if new_address.is_valid():
+            new_addresses_data = serialize("json", new_address)
             new_address.save()
-            return redirect(
-                "user_profile"
-            )  # Redirect to the user profile where address is updated to after successful creation
-    else:
-        new_address = Address()
-    return render(request, "address_create.html", {"address": new_address})
+            return render(
+                request, "address_create.html", {"address": new_addresses_data}
+            )
 
 
-def update_an_address(request, address_id):
-    # address = Address.objects.get(pk=address_id)
-    address = get_object_or_404(Address, pk=address_id)
-    if request.method == "POST":
-        new_address = Address(request.POST, instance=address)
+def update_an_address(request):
+    address_id = request.PUT.get("address_id")
+    if address_id is not None:
+        address = get_object_or_404(Address, pk=address_id)
+        new_address = Address(request.PUT, instance=address)
         if new_address.is_valid():
             new_address.save(address_id)
-            return redirect(
-                "user_profile"
-            )  # Redirect to the user profile where address is updated to after successful creation
+            return redirect("address_update.html", {"address": new_address})
     else:
-        address = Address()
-    return render(request, "address_update.html", {"address": new_address})
+        new_address = Address(request.PUT)
+
+    return render(request, "NOT_FOUND.html.html", {"Items Not Found"})
 
 
-def delete_an_address(request, address_id):
-    # address = Address.objects.get(pk=address_id)
-    address = get_object_or_404(Address, pk=address_id)
+def delete_an_address(request):
     if request.method == "POST":
-        address.delete_by_id(address_id)
-        return redirect(
-            "user_profile"
-        )  # Redirect to the user profile where address is updated to after successful creation
-    return render(request, "address_delete.html", {"address": address})
+        address_id = request.POST.get("address_id")
+        if address_id is not None:
+            address = get_object_or_404(Address, pk=address_id)
+            address.delete()
+            return redirect("address_delete.html")
+
+    return render(request, "NOT_FOUND.html.html", {"Items Not Found"})

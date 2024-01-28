@@ -8,12 +8,12 @@ from gymCMS.views.address import (
 )
 from gymCMS.views.appointment import (
     list_all_appointments,
-    show_an_appointment,
+    show_an_appointment_by_id,
     create_an_appointment,
     update_an_appointment,
     delete_an_appointment,
     list_all_appointment_types,
-    show_appointment_type_details,
+    show_appointment_type_details_by_id,
     create_an_appointment_type,
 )
 from gymCMS.views.post import (
@@ -63,7 +63,7 @@ urlpatterns = [
     path("appointmenttypes/", list_all_appointment_types, name="addresstype-list"),
     path(
         "appointmenttypes/<int:pk>/",
-        show_appointment_type_details,
+        show_appointment_type_details_by_id,
         name="appointmenttype-detail",
     ),
     path(
@@ -73,7 +73,9 @@ urlpatterns = [
     ),
     # Appointment
     path("appointments/", list_all_appointments, name="appointment-list"),
-    path("appointments/<int:pk>/", show_an_appointment, name="appointment-details"),
+    path(
+        "appointments/<int:pk>/", show_an_appointment_by_id, name="appointment-details"
+    ),
     path("appointment/create/", create_an_appointment, name="appointment-create"),
     path(
         "appointments/<int:pk>/update/",
