@@ -77,13 +77,13 @@ WSGI_APPLICATION = "gymProject.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # For development only
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "gymProject",
-        "HOST": "localhost",
-        "USER": "root",
-        "PASSWORD": "storefront",
+        "NAME": "gymproject-db",
+        "USER": "admin",
+        "PASSWORD": "password",
+        "HOST": "gymproject-db.cd6qoiikmbxh.us-west-2.rds.amazonaws.com",
+        "PORT": "3306",
     }
 }
 
