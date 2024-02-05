@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-&h2uh!92xd9u5x-_mmjn%es9or#e9!pzv&cq*&84^o@do)6m2j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -79,7 +79,7 @@ WSGI_APPLICATION = "gymProject.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "gymproject-db",
+        "NAME": "gymprojectdb",
         "USER": "admin",
         "PASSWORD": "password",
         "HOST": "gymproject-db.cd6qoiikmbxh.us-west-2.rds.amazonaws.com",

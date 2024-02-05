@@ -34,3 +34,11 @@
       - if verified, upload the local project to the ECR
     - Upload the code base to ECR
     - Deploy the project to ECS
+
+Docker Build:
+
+- docker build -t gymproject .
+  - t == 'tag'
+- docker run -d -p 8000:8000 gymproject
+
+TODO: Run ECR
