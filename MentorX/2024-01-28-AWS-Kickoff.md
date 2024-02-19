@@ -33,6 +33,7 @@ The primary difference between Amazon ECR and ECS is that while ECR provides the
        - `docker build -t gymproject .`
          - t == 'tag'
        - `docker run -d -p 8000:8000 gymproject`
+         - 本地 python manage.py runserver 的 port 要对应到 docker image 里面设置的 port number，也就是若本机为 server port 需要对应。
    - [ ] Explain why I need to run docker locally before deploy to the AWS
    - [?] **Verification**
 
@@ -57,6 +58,9 @@ The primary difference between Amazon ECR and ECS is that while ECR provides the
    - [?] **Verification**
 
 4. Next Steps:
-   - Deploy the project to ECS
-   - [?] 更改域名
+   - Deploy the project to ECS: ECR is a prerequ
+     - EKS - AWS
+     - Kinetics - Google
+   - [ ] 注册域名 and mapping: dns mapping root53
+   - [ ] 链接 github action：run integration, docker build and run, push new image to ecr, and then trigger new deployment of ecs.
    - [?] 前端流程
