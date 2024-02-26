@@ -37,6 +37,6 @@ jobs:
         run: aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 851725592427.dkr.ecr.us-west-2.amazonaws.com
       # Docker Build and Push
       - name: Build Docker
-        run: docker build -t gymproject .
+        run: docker build -t 851725592427.dkr.ecr.us-west-2.amazonaws.com/gymcms:gymproject .
       - name: Push Docker
-        run: docker push gymproject
+        run: docker push 851725592427.dkr.ecr.us-west-2.amazonaws.com/gymcms:gymproject
