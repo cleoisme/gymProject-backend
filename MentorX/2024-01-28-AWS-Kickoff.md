@@ -64,3 +64,8 @@ The primary difference between Amazon ECR and ECS is that while ECR provides the
    - [ ] 注册域名 and mapping: dns mapping root53
    - [ ] 链接 github action：run integration, docker build and run, push new image to ecr, and then trigger new deployment of ecs.
    - [?] 前端流程
+
+- TODO: route53
+- frontend
+- test backend: 访问 8000/admin
+  - unit test
