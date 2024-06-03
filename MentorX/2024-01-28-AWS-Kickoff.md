@@ -61,7 +61,7 @@ The primary difference between Amazon ECR and ECS is that while ECR provides the
    - Deploy the project to ECS: ECR is a prerequ
      - EKS - AWS
      - Kinetics - Google
-   - [ ] 注册域名 and mapping: dns mapping root53
+   - [ ] 注册域名 and mapping: dns mapping route53
    - [ ] 链接 github action：run integration, docker build and run, push new image to ecr, and then trigger new deployment of ecs.
    - [?] 前端流程
 
