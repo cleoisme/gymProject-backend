@@ -69,3 +69,7 @@ The primary difference between Amazon ECR and ECS is that while ECR provides the
 - frontend
 - test backend: 访问 8000/admin
   - unit test
+
+Temporarily pause the cluster/service by scale the task down to 1: aws ecs update-service --cluster <cluster_name> --service <service_name> --desired-count 0
+
+To scale back up: aws ecs update-service --cluster <cluster_name> --service <service_name> --desired-count <desired_number_of_tasks>
